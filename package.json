@@ -1,11 +1,19 @@
 {
   "name": "kristelllansonneur_3_01022021",
   "version": "1.0.0",
-  "description": "",
+  "description": "Ohmyfood",
   "main": "index.js",
   "scripts": {
     "sass": "sass --watch ./sass/main.scss:./css/style.css"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Telk44/KristellLansonneur_3_01022021.git"
+  },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Telk44/KristellLansonneur_3_01022021/issues"
+  },
+  "homepage": "https://github.com/Telk44/KristellLansonneur_3_01022021#readme"
 }

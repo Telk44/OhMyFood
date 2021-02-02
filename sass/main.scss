@@ -1,0 +1,50 @@
+body
+{ 
+    font-family: 'Roboto', sans-serif,verdana;
+    max-width:1440px;
+    background-color: #ffffff;
+    margin: auto;
+    padding: 0;
+    text-align: center;
+   
+}
+h1{
+    font-family: 'Shrikhand', cursive;
+    font-size: 2rem;
+    font-weight: 400;
+    padding: 15px 0 10px;
+    margin: 0px;
+}
+h4{
+
+}
+
+$background-dark:#eaeaea;
+$backgroung-light:#f6f6f6;
+$primary:#9356DC;
+$secondary:#FF79DA;
+$tertiary:#99E2D0;
+$shadow:#cfcfcf;
+
+@mixin bloc-shadow{
+    box-shadow: 0px 0px 0.5rem 0px $shadow;
+}
+
+header{
+    text-align: center;
+    @include bloc-shadow;
+    position: relative;
+    z-index: 10;    
+}
+
+.location{
+    display: flex;
+    justify-content: center;
+    background-color: $background-dark;   
+        img{
+            width: 14px;      
+         }
+        h4{
+            padding-left:18px;
+        }
+}
