@@ -1,6 +1,6 @@
 body {
   font-family: 'Roboto', sans-serif,verdana;
-  max-width: 1440px;
+  /* max-width:1440px; */
   background-color: #ffffff;
   margin: auto;
   padding: 0;
@@ -32,7 +32,7 @@ header {
     padding-left: 18px; }
 
 .presentation {
-  padding: 32px;
+  padding: 32px 32px 70px 32px;
   background-color: #f6f6f6; }
   .presentation p {
     font-weight: 300;
@@ -40,13 +40,53 @@ header {
     margin-bottom: 30px; }
   .presentation__btn {
     padding: 14px 24px;
+    box-shadow: 4px 4px 10px #cfcfcf;
     background: #9356DC;
     background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
     border-radius: 100px;
     color: white;
     text-decoration: none; }
 
-.fonction img {
-  width: 14px; }
+.fonctionnement {
+  margin: 50px 0; }
+  .fonctionnement .container {
+    max-width: 1280px; }
+    .fonctionnement .container h2 {
+      text-align: left;
+      padding-left: 20px; }
+    .fonctionnement .container__list {
+      counter-reset: number;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center; }
+    .fonctionnement .container__picto {
+      width: 14px;
+      filter: invert(53%) sepia(12%) saturate(4%) hue-rotate(314deg) brightness(91%) contrast(88%);
+      margin-right: 20px; }
+      .fonctionnement .container__picto:hover {
+        filter: invert(39%) sepia(72%) saturate(900%) hue-rotate(233deg) brightness(90%) contrast(91%); }
+    .fonctionnement .container__btn {
+      padding: 26px;
+      background-color: #f6f6f6;
+      border-radius: 25px;
+      margin: 0 24px 24px 24px;
+      list-style-type: none;
+      counter-increment: number;
+      position: relative;
+      box-shadow: 4px 4px 10px #cfcfcf; }
+      .fonctionnement .container__btn:hover {
+        background-color: #f5edff; }
+      .fonctionnement .container__btn::before {
+        content: counter(number);
+        padding: 6px 10px;
+        margin-right: 8px;
+        vertical-align: top;
+        background: #9356DC;
+        border-radius: 60px;
+        font-size: 0.8em;
+        color: white;
+        position: absolute;
+        top: 24px;
+        left: -14px; }
 
 /*# sourceMappingURL=style.css.map */
