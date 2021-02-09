@@ -39,6 +39,15 @@ $background-footer:#353535;
 @mixin btn-shadow{
     box-shadow: 4px 4px 10px $shadow;
 }
+@mixin btn-background{
+        padding: 14px 24px;        
+        background: $primary;
+        background-image:linear-gradient(to bottom right, $secondary, $primary);        
+        border-radius: 100px;
+        color: white;
+        text-decoration: none;
+        @include btn-shadow();
+}
 
 header{
     text-align: center;
@@ -71,14 +80,8 @@ header{
         font-size: 18px;
         margin-bottom: 30px;
     }
-    &__btn{
-        padding: 14px 24px;
-        @include btn-shadow();
-        background: $primary;
-        background-image:linear-gradient(to bottom right, $secondary, $primary);        
-        border-radius: 100px;
-        color: white;
-        text-decoration: none;                 
+    &__clic{
+        @include btn-background();
     }
 }
 .fonctionnement{
@@ -130,7 +133,7 @@ header{
             } 
         }
     }
-    .resto{
+    .list{
         background-color: $backgroung-light;
         padding: 15px 0 60px; 
         text-align: left;        
@@ -194,6 +197,7 @@ header{
     border-top-left-radius:50px;
     border-top-right-radius: 50px;
     margin-top: -60px;
+    padding-bottom: 56px;
     position: relative;
     z-index: 1;   
     &__name{
@@ -205,10 +209,20 @@ header{
                 width:24px;    
             } 
     }
+    &__clic{
+        @include btn-background();
+    }
+}
+.all-menu{
+    padding:0 10px 20px 10px;  
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;    
 }
 .menu{
-    text-align: left;
-    padding: 0 10px;    
+    text-align: left;  
+    max-width: 350px;
+    width: 100%;  
     &__title{
         font-weight: 300;
         position: relative;
@@ -226,7 +240,7 @@ header{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        padding: 10px;
+        padding: 10px;             
         background-color: white;
         border-radius: 20px;
         margin-bottom: 20px;
@@ -247,7 +261,9 @@ header{
             padding-top: 26px;
         }          
     }
+
 }
+
 footer{
     background-color:$background-footer ;
     color: white;
