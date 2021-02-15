@@ -10,72 +10,74 @@
     <title>Ohmyfood</title>   
 </head>
 <body>
-    <header>
-        <h1>ohmyfood</h1>
-    </header>
-    <main>
-        <section class="location">
-            <img src="images/fontawesome/map-marker-alt-solid.svg" alt="">
-            <h4> Paris, Belleville</h4>
-        </section>
-        <section class="presentation">
-            <h2>Réservez le menu qui vous convient</h2>
-            <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-            <a href="#restaurants" class="presentation__clic">Explorer nos restaurants </a>
-        </section>
-        <section class="fonctionnement">
-            <div class="container">
-                <h2>Fonctionnement</h2>
-                <ol class="container__list">
-                    <li class="container__btn"> <img class= "container__picto" src="images/fontawesome/mobile-alt-solid.svg" alt=""> Choisissez un restaurant</li>
-                    <li class="container__btn"> <img class="container__picto" src="images/fontawesome/list-solid.svg" alt=""> Composez votre menu</li>
-                    <li class="container__btn"> <img class="container__picto" src="images/fontawesome/store-solid.svg" alt="">Dégustez au restaurant</li>
-                </ol>
-            </div>
-            <div class="list">
-                <h2>Restaurants</h2>
-                <div class="vignettes">
-                    <a class="box" href="menu-gout.html">
-                        <img class="box__picture" src="images/restaurants/palette-gout.jpg" alt="La palette du goût">
-                        <h3>La palette du goût</h3>
-                        <p>Ménilmontant</p>
-                        <img class="box__heart" src="images/fontawesome/heart-regular.svg" alt="">
-                        <div class="box__nouveau">Nouveau</div>                        
-                    </a>
-                    <a class="box" href="menu-enchantee.html">
-                        <img class="box__picture" src="images/restaurants/note-enchantee.jpg" alt="La note enchantée">
-                        <h3>La note enchantée</h3>
-                        <p>Charonne</p>
-                        <img class="box__heart" src="images/fontawesome/heart-regular.svg" alt="">
-                        <div class="box__nouveau">Nouveau</div>                        
-                    </a>
-                    <a class="box" href="menu-francaise.html">
-                        <img class="box__picture" src="images/restaurants/a-la-francaise.jpg" alt="A la française">
-                        <h3>À la française</h3>
-                        <p>Cité Rouge</p>
-                        <img class="box__heart" src="images/fontawesome/heart-regular.svg" alt="">                                               
-                    </a>
-                    <a class="box" href="menu-sens.html">
-                        <img class="box__picture" src="images/restaurants/delice-sens.jpg" alt="Le délice des sens">
-                        <h3>Le délice des sens</h3>
-                        <p>Folie-Méricourt</p>
-                        <img class="box__heart" src="images/fontawesome/heart-regular.svg" alt="">                                     
-                    </a>
+    <div id="full">
+        <header>
+            <h1>ohmyfood</h1>
+        </header>
+        <main>
+            <section class="location">
+                <img src="images/fontawesome/map-marker-alt-solid.svg" alt="">
+                <h4> Paris, Belleville</h4>
+            </section>
+            <section class="presentation">
+                <h2>Réservez le menu qui vous convient</h2>
+                <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+                <a href="#restaurants" class="presentation__btn">Explorer nos restaurants</a>
+            </section>
+            <section class="fonctionnement">
+                <div class="fonctionnement__container">
+                    <h2>Fonctionnement</h2>
+                    <ol>
+                        <li> <img class= "fonctionnement__container__picto" src="images/fontawesome/mobile-alt-solid.svg" alt=""> Choisissez un restaurant</li>
+                        <li> <img class="fonctionnement__container__picto" src="images/fontawesome/list-solid.svg" alt=""> Composez votre menu</li>
+                        <li> <img class="fonctionnement__container__picto" src="images/fontawesome/store-solid.svg" alt="">Dégustez au restaurant</li>
+                    </ol>
                 </div>
-            </div>
-        </section>
+                <div class="fonctionnement__list">
+                    <h2>Restaurants</h2>
+                    <div class="fonctionnement__list__vignettes">
+                        <a class="box" href="menu-gout.html">
+                            <img class="box__picture" src="images/restaurants/palette-gout.jpg" alt="La palette du goût">
+                            <h3>La palette du goût</h3>
+                            <p>Ménilmontant</p>
+                            <img class="box__heart" src="images/fontawesome/heart-regular.svg" alt="">
+                            <div class="box__nouveau">Nouveau</div>                        
+                        </a>
+                        <a class="box" href="menu-enchantee.html">
+                            <img class="box__picture" src="images/restaurants/note-enchantee.jpg" alt="La note enchantée">
+                            <h3>La note enchantée</h3>
+                            <p>Charonne</p>
+                            <img class="box__heart" src="images/fontawesome/heart-regular.svg" alt="">
+                            <div class="box__nouveau">Nouveau</div>                        
+                        </a>
+                        <a class="box" href="menu-francaise.html">
+                            <img class="box__picture" src="images/restaurants/a-la-francaise.jpg" alt="A la française">
+                            <h3>À la française</h3>
+                            <p>Cité Rouge</p>
+                            <img class="box__heart" src="images/fontawesome/heart-regular.svg" alt="">                                               
+                        </a>
+                        <a class="box" href="menu-sens.html">
+                            <img class="box__picture" src="images/restaurants/delice-sens.jpg" alt="Le délice des sens">
+                            <h3>Le délice des sens</h3>
+                            <p>Folie-Méricourt</p>
+                            <img class="box__heart" src="images/fontawesome/heart-regular.svg" alt="">                                     
+                        </a>
+                    </div>
+                </div>
+            </section>
 
 
-    </main>
-    <footer>
-        <h3>ohmyfood</h3>
-        <ul>
-            <li><a href="#"><img src="images/fontawesome/utensils-solid.svg" alt="">Proposer un restaurant</a></li>
-            <li><a href="#"><img src="images/fontawesome/hands-helping-solid.svg" alt="">Devenir partenaire</a></li>
-            <li><a href="#">Mentions légales</a></li>
-            <li><a href="mailto:contact@ohmyfood.com">Contact</a></li>
-        </ul>
-    </footer>
+        </main>
+        <footer>
+            <h3>ohmyfood</h3>
+            <ul>
+                <li><a href="#"><img src="images/fontawesome/utensils-solid.svg" alt="">Proposer un restaurant</a></li>
+                <li><a href="#"><img src="images/fontawesome/hands-helping-solid.svg" alt="">Devenir partenaire</a></li>
+                <li><a href="#">Mentions légales</a></li>
+                <li><a href="mailto:contact@ohmyfood.com">Contact</a></li>
+            </ul>
+        </footer>
+</div>
     
 </body>
 </html>

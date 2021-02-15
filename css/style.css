@@ -7,6 +7,11 @@ body {
   text-align: center;
 }
 
+#full {
+  max-width: 1440px;
+  margin: auto;
+}
+
 h1 {
   font-family: 'Shrikhand', cursive;
   font-size: 30px;
@@ -57,42 +62,79 @@ header img {
   font-size: 18px;
   margin-bottom: 30px;
 }
-.presentation__clic {
+.presentation__btn {
   padding: 14px 24px;
-  background: #9356DC;
-  background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  background-image: linear-gradient(349deg, #020024 0%, #9356DC 0%, #FF79DA 100%);
   border-radius: 100px;
   color: white;
   text-decoration: none;
   box-shadow: 4px 4px 10px #cfcfcf;
+  cursor: pointer;
+  /*  padding: 14px 24px;        
+   background:$background-light;
+   background-image: linear-gradient(349deg, rgba(2,0,36,1) 0%, ($primary) 0%, ($secondary) 100%);         
+   border-radius: 100px;
+   color: white;
+   text-decoration: none;
+   position: relative;
+   cursor: pointer; */
+ /* @include btn-shadow();
+ z-index: 1;
+ &:hover{                   
+     &::after {
+         opacity: 1;
+     }
+ }             
+ &::after {
+     content:"";
+     border-radius: 100px;
+     position: absolute;
+     top: 0;
+     right: 0;
+     bottom: 0;
+     left: 0;
+     background: $background-light;
+     background-image: linear-gradient(deg, rgba(2,0,36,1) 0%, lighten($primary,5) 0%, darken($secondary, 10)100%); 
+     @include bloc-shadow-darken();                   
+     opacity: 0;
+     z-index: -1;
+     transition: opacity 250ms;
+} */
+}
+.presentation__btn:hover {
+  box-shadow: 4px 4px 10px #b6b6b6;
+  background-image: linear-gradient(349deg, #020024 0%, #a16be0 0%, #ff46cc 100%);
 }
 
 .fonctionnement {
   margin-top: 50px;
 }
-.fonctionnement .container {
+.fonctionnement__container {
   max-width: 1280px;
 }
-.fonctionnement .container h2 {
+.fonctionnement__container h2 {
   text-align: left;
   padding-left: 20px;
 }
-.fonctionnement .container__list {
+.fonctionnement__container ol {
   counter-reset: number;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
 }
-.fonctionnement .container__picto {
+.fonctionnement__container__picto {
   width: 14px;
   filter: invert(53%) sepia(12%) saturate(4%) hue-rotate(314deg) brightness(91%) contrast(88%);
   margin-right: 20px;
+  /*  &:hover{
+       filter: invert(39%) sepia(72%) saturate(900%) hue-rotate(233deg) brightness(90%) contrast(91%);
+   } */
 }
-.fonctionnement .container__picto:hover {
-  filter: invert(39%) sepia(72%) saturate(900%) hue-rotate(233deg) brightness(90%) contrast(91%);
-}
-.fonctionnement .container__btn {
+.fonctionnement__container li {
+  display: flex;
+  align-items: center;
   padding: 26px;
+  width: 220px;
   background-color: #f6f6f6;
   border-radius: 25px;
   margin: 0 24px 24px 24px;
@@ -101,10 +143,10 @@ header img {
   position: relative;
   box-shadow: 4px 4px 10px #cfcfcf;
 }
-.fonctionnement .container__btn:hover {
+.fonctionnement__container li:hover {
   background-color: #f5edff;
 }
-.fonctionnement .container__btn::before {
+.fonctionnement__container li::before {
   content: counter(number);
   padding: 6px 10px;
   margin-right: 8px;
@@ -117,20 +159,20 @@ header img {
   top: 24px;
   left: -14px;
 }
-.fonctionnement .list {
+.fonctionnement__list {
   background-color: #f6f6f6;
   padding: 15px 0 60px;
   text-align: left;
 }
-.fonctionnement .list h2 {
+.fonctionnement__list h2 {
   padding-left: 12px;
 }
-.fonctionnement .list .vignettes {
+.fonctionnement__list__vignettes {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
-.fonctionnement .list .vignettes .box {
+.fonctionnement__list__vignettes .box {
   background-color: white;
   text-decoration: none;
   color: black;
@@ -141,24 +183,24 @@ header img {
   margin-bottom: 20px;
   box-shadow: 0px 0px 0.5rem 0px #cfcfcf;
 }
-.fonctionnement .list .vignettes .box__picture {
+.fonctionnement__list__vignettes .box__picture {
   width: 100%;
   height: 174px;
   object-fit: cover;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
-.fonctionnement .list .vignettes .box__heart {
+.fonctionnement__list__vignettes .box__heart {
   width: 25px;
   position: absolute;
   top: 190px;
   left: 290px;
 }
-.fonctionnement .list .vignettes .box h3, .fonctionnement .list .vignettes .box p {
+.fonctionnement__list__vignettes .box h3, .fonctionnement__list__vignettes .box p {
   padding-left: 10px;
   margin: 6px;
 }
-.fonctionnement .list .vignettes .box__nouveau {
+.fonctionnement__list__vignettes .box__nouveau {
   padding: 5px;
   background-color: #99e2d0;
   color: #008766;
@@ -183,7 +225,7 @@ header img {
   margin-top: -60px;
   padding-bottom: 56px;
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 .resto__name {
   display: flex;
@@ -196,31 +238,32 @@ header img {
 }
 .resto__clic {
   padding: 14px 24px;
-  background: #9356DC;
-  background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  background-image: linear-gradient(349deg, #020024 0%, #9356DC 0%, #FF79DA 100%);
   border-radius: 100px;
   color: white;
   text-decoration: none;
   box-shadow: 4px 4px 10px #cfcfcf;
 }
-
-.all-menu {
+.resto__clic:hover {
+  box-shadow: 4px 4px 10px #b6b6b6;
+  background-image: linear-gradient(349deg, #020024 0%, #a16be0 0%, #ff46cc 100%);
+}
+.resto__all {
   padding: 0 10px 20px 10px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
-
-.menu {
+.resto__all__menu {
   text-align: left;
   max-width: 350px;
   width: 100%;
 }
-.menu__title {
+.resto__all__menu__title {
   font-weight: 300;
   position: relative;
 }
-.menu__title::after {
+.resto__all__menu__title::after {
   content: "";
   width: 45px;
   height: 4px;
@@ -229,28 +272,50 @@ header img {
   left: 0;
   bottom: -10px;
 }
-.menu__detail {
+.resto__all__menu__detail {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 10px;
+  padding-left: 10px;
   background-color: white;
-  border-radius: 20px;
+  border-radius: 15px;
   margin-bottom: 20px;
   box-shadow: 0px 0px 0.5rem 0px #cfcfcf;
 }
-.menu__detail .txt h4 {
+.resto__all__menu__detail:hover > .select {
+  transform: scaleX(1);
+}
+.resto__all__menu__detail .txt {
+  padding: 5px 0;
+}
+.resto__all__menu__detail .txt h4 {
   font-weight: 500;
   margin: 0;
+  padding-top: 5px;
 }
-.menu__detail .txt p {
+.resto__all__menu__detail .txt p {
   margin: 0;
   padding-top: 5px;
   font-weight: 200;
 }
-.menu__detail .price {
+.resto__all__menu__detail .price {
   font-weight: bold;
-  padding-top: 26px;
+  padding-top: 35px;
+  padding-right: 15px;
+}
+.resto__all__menu__detail .select {
+  transform-origin: 50% 0;
+  transform: scaleX(0);
+  transition: transform 1000ms;
+  padding: 16px 12px 12px 12px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: #99e2d0;
+}
+.resto__all__menu__detail .select__circle {
+  width: 20px;
+  padding: 5px;
+  filter: invert(1);
 }
 
 footer {
