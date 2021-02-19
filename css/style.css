@@ -70,6 +70,8 @@ header img {
   text-decoration: none;
   box-shadow: 4px 4px 10px #cfcfcf;
   cursor: pointer;
+  width: 100%;
+  transition: background-image 500ms;
   /*  padding: 14px 24px;        
    background:$background-light;
    background-image: linear-gradient(349deg, rgba(2,0,36,1) 0%, ($primary) 0%, ($secondary) 100%);         
@@ -146,6 +148,9 @@ header img {
 .fonctionnement__container li:hover {
   background-color: #f5edff;
 }
+.fonctionnement__container li:hover:hover img {
+  filter: invert(39%) sepia(72%) saturate(900%) hue-rotate(233deg) brightness(90%) contrast(91%);
+}
 .fonctionnement__container li::before {
   content: counter(number);
   padding: 6px 10px;
@@ -195,6 +200,7 @@ header img {
   position: absolute;
   top: 190px;
   left: 290px;
+  filter: blue;
 }
 .fonctionnement__list__vignettes .box h3, .fonctionnement__list__vignettes .box p {
   padding-left: 10px;
@@ -274,48 +280,73 @@ header img {
 }
 .resto__all__menu__detail {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   padding-left: 10px;
   background-color: white;
   border-radius: 15px;
   margin-bottom: 20px;
+  overflow: hidden;
   box-shadow: 0px 0px 0.5rem 0px #cfcfcf;
 }
 .resto__all__menu__detail:hover > .select {
-  transform: scaleX(1);
+  margin: 0 0 0 -77px;
 }
-.resto__all__menu__detail .txt {
+.resto__all__menu__detail:hover > .select img {
+  transform: rotate(2turn);
+}
+
+.select {
+  display: flex;
+  transition: margin 500ms ease-in-out;
+  padding: 16px;
+  margin: 0 -64px 0 -128px;
+  /* border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px; */
+  background-color: #99e2d0;
+}
+.select img {
+  width: 20px;
+  filter: invert(1);
+  display: block;
+  transform: rotate(180deg);
+  transition: transform 500ms ease-in-out;
+}
+
+.txt {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: auto;
+  max-width: 70%;
   padding: 5px 0;
 }
-.resto__all__menu__detail .txt h4 {
+.txt h4 {
   font-weight: 500;
   margin: 0;
   padding-top: 5px;
 }
-.resto__all__menu__detail .txt p {
+.txt p {
   margin: 0;
   padding-top: 5px;
   font-weight: 200;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
-.resto__all__menu__detail .price {
+
+.price {
+  /* font-weight: bold;
+  display: flex;
+  align-items: flex-end; */
+  /*  padding-top: 35px;
+   padding-right: 15px; */
   font-weight: bold;
-  padding-top: 35px;
-  padding-right: 15px;
-}
-.resto__all__menu__detail .select {
-  transform-origin: 50% 0;
-  transform: scaleX(0);
-  transition: transform 1000ms;
-  padding: 16px 12px 12px 12px;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  background-color: #99e2d0;
-}
-.resto__all__menu__detail .select__circle {
-  width: 20px;
-  padding: 5px;
-  filter: invert(1);
+  display: flex;
+  align-items: flex-end;
+  margin-right: 1rem;
+  margin-top: 2rem;
+  width: 10%;
+  height: auto;
+  transform-origin: right;
 }
 
 footer {
