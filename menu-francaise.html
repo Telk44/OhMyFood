@@ -10,99 +10,139 @@
     <title>Ohmyfood</title>   
 </head>
 <body>
-    <header>
-        <a href="index.html"><img src="images/fontawesome/arrow-left-solid.svg" alt=""></a>
-        <h1>ohmyfood</h1>
-    </header>
-    <img class="first-picture" src="images/restaurants/a-la-francaise.jpg" alt="A la française">
-    <main class="resto">
-            <div class="resto__name">
-                <h1>À la française</h1>
-                <img src="images/fontawesome/heart-regular.svg"alt="">
-            </div>
-            <div class="resto__all">
-                <div class="resto__all__menu">
-                    <h4 class="resto__all__menu__title">ENTRÉES</h4>                
-                    <div class="resto__all__menu__detail">
-                        <div class="txt">
-                            <h4>Tartare de poulpe acidulé </h4>
-                            <p>Aux zestes d'orange</p>  
-                        </div>                  
-                        <div class="price">25€</div>
+    <div id="full">
+    <!--Header -->
+        <header>
+            <a href="index.html"><img src="images/fontawesome/arrow-left-solid.svg" alt=""></a>
+            <h1>ohmyfood</h1>
+        </header>
+        <img class="first-picture" src="images/restaurants/a-la-francaise.jpg" alt="A la française">
+
+    <!--présentation menu resto -->
+        <main class="resto">
+                <div class="resto__name">
+                    <h1>À la française</h1>
+                    <img src="images/fontawesome/heart-regular.svg"alt="">
+                </div>
+                <div class="resto__all">
+                    <!--ENTREES-->
+                    <div class="resto__all__menu">
+                        <h4 class="resto__all__menu__title">ENTRÉES</h4> 
+                        <div class="plat transitionY1"> 
+                            <div class="plat__txt">
+                                <h4>Tartare de poulpe acidulé </h4>
+                                <p>Aux zestes d'orange</p>  
+                            </div>      
+                            <div class="plat__price">25€</div>
+                            <div class="plat__select"> 
+                                <img src="images/fontawesome/check-circle-solid.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="plat transitionY2"> 
+                            <div class="plat__txt">
+                                <h4>Velouté de légumes d'antan</h4>
+                                <p>Carotte, panais, topinambour</p>  
+                            </div>                  
+                            <div class="plat__price">35€</div>
+                            <div class="plat__select"> 
+                                <img src="images/fontawesome/check-circle-solid.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="plat transitionY3"> 
+                            <div class="plat__txt">
+                                <h4>Soupe à l'oignon</h4>
+                                <p>Revisitée</p>  
+                            </div>                  
+                            <div class="plat__price">20€</div>
+                            <div class="plat__select"> 
+                                <img src="images/fontawesome/check-circle-solid.svg" alt="">
+                            </div>
+                        </div>
+                    </div> 
+                    <!--PLATS -->          
+                    <div class="resto__all__menu">
+                        <h4 class="resto__all__menu__title">PLATS</h4>                
+                        <div class="plat transitionY4"> 
+                            <div class="plat__txt">
+                                <h4>Noix de coquilles Saint-Jacques</h4>
+                                <p>Accompagnées d'une purée de panais</p>  
+                            </div>                  
+                            <div class="plat__price">40€</div>
+                            <div class="plat__select"> 
+                                <img src="images/fontawesome/check-circle-solid.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="plat transitionY5"> 
+                            <div class="plat__txt">
+                                <h4>Magret de canard</h4>
+                                <p>Et parmentier de pommes de terre</p>  
+                            </div>                  
+                            <div class="plat__price">35€</div>
+                            <div class="plat__select"> 
+                                <img src="images/fontawesome/check-circle-solid.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="plat transitionY6"> 
+                            <div class="plat__txt">
+                                <h4>Pigeonneau d’Ille-et-Vilaine</h4>
+                                <p>Sur son lit de gnocchis aux légumes</p>  
+                            </div>                  
+                            <div class="plat__price">44€</div>
+                            <div class="plat__select"> 
+                                <img src="images/fontawesome/check-circle-solid.svg" alt="">
+                            </div>
+                        </div>
                     </div>
-                    <div class="resto__all__menu__detail">
-                        <div class="txt">
-                            <h4>Velouté de légumes d'antan</h4>
-                            <p>Carotte, panais, topinambour</p>  
-                        </div>                  
-                        <div class="price">35€</div>
-                    </div>
-                    <div class="resto__all__menu__detail">
-                        <div class="txt">
-                            <h4>Soupe à l'oignon</h4>
-                            <p>Revisitée</p>  
-                        </div>                  
-                        <div class="price">20€</div>
-                    </div>                    
-                </div>           
-                <div class="resto__all__menu">
-                    <h4 class="resto__all__menu__title">PLATS</h4>                
-                    <div class="resto__all__menu__detail">
-                        <div class="txt">
-                            <h4>Noix de coquilles Saint-Jacques</h4>
-                            <p>Accompagnées d'une purée de panais</p>  
-                        </div>                  
-                        <div class="price">40€</div>
-                    </div>
-                    <div class="resto__all__menu__detail">
-                        <div class="txt">
-                            <h4>Magret de canard</h4>
-                            <p>Et parmentier de pommes de terre</p>  
-                        </div>                  
-                        <div class="price">35€</div>
-                    </div>
-                    <div class="resto__all__menu__detail">
-                        <div class="txt">
-                            <h4>Pigeonneau d’Ille-et-Vilaine</h4>
-                            <p>Sur son lit de gnocchis aux légumes</p>  
-                        </div>                  
-                        <div class="price">44€</div>
+                    <!--DESSERTS -->
+                    <div class="resto__all__menu">
+                        <h4 class="resto__all__menu__title">DESSERTS</h4>                
+                        <div class="plat transitionY7"> 
+                            <div class="plat__txt">
+                                <h4>Pétales de violettes glacés</h4>
+                                <p>Et purée de noisettes</p>  
+                            </div>                  
+                            <div class="plat__price">18€</div>
+                            <div class="plat__select"> 
+                                <img src="images/fontawesome/check-circle-solid.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="plat transitionY8"> 
+                            <div class="plat__txt">
+                                <h4>Fondant au chocolat</h4>
+                                <p>Revisité</p>  
+                            </div>                  
+                            <div class="plat__price">22€</div>
+                            <div class="plat__select"> 
+                                <img src="images/fontawesome/check-circle-solid.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="plat transitionY9"> 
+                            <div class="plat__txt">
+                                <h4>Millefeuille croustillant</h4>
+                                <p>Myrtilles et pâte d’amande</p>  
+                            </div>                  
+                            <div class="plat__price">23€</div>
+                            <div class="plat__select"> 
+                                <img src="images/fontawesome/check-circle-solid.svg" alt="">
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="resto__all__menu">
-                    <h4 class="resto__all__menu__title">DESSERTS</h4>                
-                    <div class="resto__all__menu__detail">
-                        <div class="txt">
-                            <h4>Pétales de violettes glacés</h4>
-                            <p>Et purée de noisettes</p>  
-                        </div>                  
-                        <div class="price">18€</div>
-                    </div>
-                    <div class="resto__all__menu__detail">
-                        <div class="txt">
-                            <h4>Fondant au chocolat</h4>
-                            <p>Revisité</p>  
-                        </div>                  
-                        <div class="price">22€</div>
-                    </div>
-                    <div class="resto__all__menu__detail">
-                        <div class="txt">
-                            <h4>Millefeuille croustillant </h4>
-                            <p>Myrtilles et pâte d’amande</p>  
-                        </div>                  
-                        <div class="price">23€</div>
-                    </div>
-                </div>
-            </div>
-            <a href="#" class="resto__clic">commander </a>
-    </main>
+    <!--bouton -->
+                <a href="#" class="resto__clic">commander </a>
+        </main>
+    
+
+ <!--Footer -->
+        <footer>
+            <h3>ohmyfood</h3>
+            <ul>
+                <li><a href="#"><img src="images/fontawesome/utensils-solid.svg" alt="">Proposer un restaurant</a></li>
+                <li><a href="#"><img src="images/fontawesome/hands-helping-solid.svg" alt="">Devenir partenaire</a></li>
+                <li><a href="#">Mentions légales</a></li>
+                <li><a href="mailto:contact@ohmyfood.com">Contact</a></li>
+            </ul>
+        </footer>
+    </div>    
 </body>
-<footer>
-    <h3>ohmyfood</h3>
-    <ul>
-        <li><a href="#"><img src="images/fontawesome/utensils-solid.svg" alt="">Proposer un restaurant</a></li>
-        <li><a href="#"><img src="images/fontawesome/hands-helping-solid.svg" alt="">Devenir partenaire</a></li>
-        <li><a href="#">Mentions légales</a></li>
-        <li><a href="mailto:contact@ohmyfood.com">Contact</a></li>
-    </ul>
-</footer>
+</html>
