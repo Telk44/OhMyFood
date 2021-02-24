@@ -124,53 +124,6 @@ $background-footer:#353535;
     z-index: -1000;
 }
 }
-/* .load{
-    z-index: 100;
-    position: absolute;
-    margin: 0;
-    padding: 0;
-    max-width:1440;
-    height: 100px;
-    display: flex;
-    justify-content: space-evenly;
-    align-content: center;
-    background-color: white;
-
-
-    &__bar1{
-        background-color:$primary;
-        height: 100%;
-        width:10px;
-        animation: bars 2s backwards ease-in-out alternate;
-        animation-delay: 200ms;        
-    }
-    &__bar2{
-        background-color:$secondary;
-        height: 100%;
-        width:10px;
-        animation: bars 2s backwards ease-in-out alternate;
-        animation-delay: 200ms;      
-    }
-    &__bar3{
-        background-color:$tertiary;
-        height: 100%;
-        width:10px;
-        animation: bars 2s backwards ease-in-out alternate;
-        animation-delay: 600ms;
-    }
-}
-@keyframes bars {
-    0% {
-        transform: scaleY(0.5);
-        
-    }
-    100% {
-        transform: scaleY(1.0);
-        
-    }
-} */
-
-
 header{
     text-align: center;
     @include bloc-shadow;
@@ -390,7 +343,6 @@ header{
             @include btn-bg-darker(); 
         }
     }
-
     &__all{
         padding:0 10px 20px 10px;  
         display: flex;
@@ -511,8 +463,27 @@ header{
             transform: rotate(180deg);
             transition: transform 500ms ease-in-out;                                        
         }
-    }          
-}   
+    }
+}          
+.transition {     
+    @for $i from 1 through 10 {
+        &--#{$i} {
+            animation:fondu 4s 0.15s*$i  backwards ease;
+            transform-origin: bottom;    
+        }
+    }   
+}
+@keyframes fondu{
+    0% {
+        transform: translateY(16px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 footer{
     background-color:$background-footer ;
     color: white;
