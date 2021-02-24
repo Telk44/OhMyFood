@@ -1,0 +1,27 @@
+footer{
+    background-color:$background-footer ;
+    color: white;
+    text-align: left;
+    padding:10px 0 20px 12px;    
+    h3{
+        font-family: 'Shrikhand', cursive;
+        font-size: 20px;
+        font-weight: lighter;
+    }
+    ul{
+        list-style-type: none;
+        padding: 0;
+    }
+    img{
+        width:12px;
+        margin-right: 10px;
+        filter: invert(1);                
+    }
+    a{
+        text-decoration: none;
+        color: white;
+    }
+    a:hover{
+        text-decoration: underline;
+    }
+}

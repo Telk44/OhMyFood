@@ -1,0 +1,12 @@
+header{
+    text-align: center;
+    @include bloc-shadow;
+    position: relative;
+    z-index: 10;   
+    img{
+        width: 18px;
+        position: absolute;
+        top:30px;
+        left:20px;             
+    }      
+}
