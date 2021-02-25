@@ -3,6 +3,8 @@
 @import "./base/base";
 @import "./layout/header";
 @import "./layout/footer";
-@import "./layout/loader";
+@import "./Components/loader";
+@import "./Components/fondu";
+@import "./Components/heart";
 @import "./pages/accueil";
 @import "./pages/restos";

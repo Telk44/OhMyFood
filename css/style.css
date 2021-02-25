@@ -79,7 +79,6 @@ footer a:hover {
   align-items: center;
   animation: out 200ms 1.5s forwards;
 }
-
 .loading__spinner {
   position: absolute;
   width: 50px;
@@ -89,23 +88,11 @@ footer a:hover {
   border: 2px solid #9356DC;
   animation: loader 1s backwards ease-in-out infinite;
 }
-
-.loading__spinner2 {
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  background-color: transparent;
-  border-radius: 50%;
+.loading__spinner--secondary {
   border: 2px solid #FF79DA;
   animation: loader  1s 300ms backwards ease-in-out infinite;
 }
-
-.loading__spinner3 {
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  background-color: transparent;
-  border-radius: 50%;
+.loading__spinner--tertiary {
   border: 2px solid #99E2D0;
   animation: loader  1s 600ms backwards ease-in-out infinite;
 }
@@ -131,6 +118,103 @@ footer a:hover {
     opacity: 0;
     display: none;
     z-index: -1000;
+  }
+}
+.transition--1 {
+  animation: fondu 4s 0.15s backwards ease;
+  transform-origin: bottom;
+}
+.transition--2 {
+  animation: fondu 4s 0.3s backwards ease;
+  transform-origin: bottom;
+}
+.transition--3 {
+  animation: fondu 4s 0.45s backwards ease;
+  transform-origin: bottom;
+}
+.transition--4 {
+  animation: fondu 4s 0.6s backwards ease;
+  transform-origin: bottom;
+}
+.transition--5 {
+  animation: fondu 4s 0.75s backwards ease;
+  transform-origin: bottom;
+}
+.transition--6 {
+  animation: fondu 4s 0.9s backwards ease;
+  transform-origin: bottom;
+}
+.transition--7 {
+  animation: fondu 4s 1.05s backwards ease;
+  transform-origin: bottom;
+}
+.transition--8 {
+  animation: fondu 4s 1.2s backwards ease;
+  transform-origin: bottom;
+}
+.transition--9 {
+  animation: fondu 4s 1.35s backwards ease;
+  transform-origin: bottom;
+}
+.transition--10 {
+  animation: fondu 4s 1.5s backwards ease;
+  transform-origin: bottom;
+}
+
+@keyframes fondu {
+  0% {
+    transform: translateY(16px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.fas {
+  opacity: 0;
+  font-size: 25px;
+  position: absolute;
+  top: 190px;
+  right: 26px;
+  background-image: linear-gradient(10deg, #f2d4f4, #FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.far {
+  font-size: 25px;
+  position: absolute;
+  top: 190px;
+  right: 26px;
+  z-index: 1;
+}
+.far:hover {
+  opacity: 0;
+  animation-name: contour-heart;
+  animation-duration: 1000ms;
+}
+.far:hover + .fas {
+  opacity: 1;
+  animation-name: progress-heart;
+  animation-duration: 1000ms;
+}
+
+@keyframes contour-heart {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes progress-heart {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 .location {
@@ -268,52 +352,6 @@ footer a:hover {
   font-size: 14px;
 }
 
-.fas {
-  opacity: 0;
-  font-size: 25px;
-  position: absolute;
-  top: 190px;
-  right: 26px;
-  background-image: linear-gradient(10deg, #f2d4f4, #FF79DA, #9356DC);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-}
-
-.far {
-  font-size: 25px;
-  position: absolute;
-  top: 190px;
-  right: 26px;
-  z-index: 1;
-}
-.far:hover {
-  opacity: 0;
-  animation-name: contour-heart;
-  animation-duration: 1000ms;
-}
-.far:hover + .fas {
-  opacity: 1;
-  animation-name: progress-heart;
-  animation-duration: 1000ms;
-}
-
-@keyframes contour-heart {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-@keyframes progress-heart {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 .first-picture {
   max-width: 100%;
   max-height: 500px;
@@ -338,10 +376,10 @@ footer a:hover {
   padding: 15px 15px 0 15px;
 }
 .resto__name .far {
-  top: 25px;
+  top: 38px;
 }
 .resto__name .fas {
-  top: 25px;
+  top: 38px;
 }
 .resto__clic {
   padding: 14px 24px;
@@ -474,58 +512,6 @@ footer a:hover {
   display: block;
   transform: rotate(180deg);
   transition: transform 500ms ease-in-out;
-}
-
-.transition--1 {
-  animation: fondu 4s 0.15s backwards ease;
-  transform-origin: bottom;
-}
-.transition--2 {
-  animation: fondu 4s 0.3s backwards ease;
-  transform-origin: bottom;
-}
-.transition--3 {
-  animation: fondu 4s 0.45s backwards ease;
-  transform-origin: bottom;
-}
-.transition--4 {
-  animation: fondu 4s 0.6s backwards ease;
-  transform-origin: bottom;
-}
-.transition--5 {
-  animation: fondu 4s 0.75s backwards ease;
-  transform-origin: bottom;
-}
-.transition--6 {
-  animation: fondu 4s 0.9s backwards ease;
-  transform-origin: bottom;
-}
-.transition--7 {
-  animation: fondu 4s 1.05s backwards ease;
-  transform-origin: bottom;
-}
-.transition--8 {
-  animation: fondu 4s 1.2s backwards ease;
-  transform-origin: bottom;
-}
-.transition--9 {
-  animation: fondu 4s 1.35s backwards ease;
-  transform-origin: bottom;
-}
-.transition--10 {
-  animation: fondu 4s 1.5s backwards ease;
-  transform-origin: bottom;
-}
-
-@keyframes fondu {
-  0% {
-    transform: translateY(16px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */

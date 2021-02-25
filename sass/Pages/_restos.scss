@@ -19,10 +19,10 @@
         justify-content: space-between;
         padding: 15px 15px 0 15px;
             .far{
-                top: 25px;
+                top: 38px;
             }
             .fas{
-                top: 25px;
+                top: 38px;
             }
     }
     &__clic{
@@ -154,23 +154,5 @@
         }
     }
 }          
-.transition {     
-    @for $i from 1 through 10 {
-        &--#{$i} {
-            animation:fondu 4s 0.15s*$i  backwards ease;
-            transform-origin: bottom;    
-        }
-    }   
-}
-@keyframes fondu{
-    0% {
-        transform: translateY(16px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
 
 
