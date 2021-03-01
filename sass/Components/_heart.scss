@@ -1,15 +1,14 @@
-.fas{                       
+.fullheart{                       
     opacity:0;                   
     font-size: 25px;
     position: absolute;
     top: 190px;
     right: 26px;                            
     background-image: linear-gradient(10deg,#f2d4f4,$secondary,$primary) ;
-    background-clip: text;
     -webkit-background-clip: text;
     color: transparent;         
 }   
-.far{
+.emptyheart{
     font-size: 25px;
     position: absolute;
     top: 190px;

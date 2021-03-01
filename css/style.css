@@ -22,7 +22,7 @@ h4 {
   font-size: 16px;
 }
 
-#full {
+.full {
   max-width: 1440px;
   margin: auto;
 }
@@ -55,10 +55,12 @@ footer ul {
   list-style-type: none;
   padding: 0;
 }
-footer img {
-  width: 12px;
+footer .icone {
   margin-right: 10px;
-  filter: invert(1);
+  font-size: 10px;
+}
+footer .fa-utensils {
+  margin-right: 17px;
 }
 footer a {
   text-decoration: none;
@@ -171,31 +173,30 @@ footer a:hover {
     opacity: 1;
   }
 }
-.fas {
+.fullheart {
   opacity: 0;
   font-size: 25px;
   position: absolute;
   top: 190px;
   right: 26px;
   background-image: linear-gradient(10deg, #f2d4f4, #FF79DA, #9356DC);
-  background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
 }
 
-.far {
+.emptyheart {
   font-size: 25px;
   position: absolute;
   top: 190px;
   right: 26px;
   z-index: 1;
 }
-.far:hover {
+.emptyheart:hover {
   opacity: 0;
   animation-name: contour-heart;
   animation-duration: 1000ms;
 }
-.far:hover + .fas {
+.emptyheart:hover + .fas {
   opacity: 1;
   animation-name: progress-heart;
   animation-duration: 1000ms;
@@ -220,10 +221,8 @@ footer a:hover {
 .location {
   display: flex;
   justify-content: center;
+  align-items: center;
   background-color: #eaeaea;
-}
-.location img {
-  width: 14px;
 }
 .location h4 {
   padding-left: 18px;
@@ -271,8 +270,8 @@ footer a:hover {
   align-items: center;
 }
 .fonctionnement__container__picto {
-  width: 14px;
-  filter: invert(53%) sepia(12%) saturate(4%) hue-rotate(314deg) brightness(91%) contrast(88%);
+  /* width: 14px; */
+  color: grey;
   margin-right: 20px;
 }
 .fonctionnement__container li {
@@ -291,8 +290,9 @@ footer a:hover {
 .fonctionnement__container li:hover {
   background-color: #f5edff;
 }
-.fonctionnement__container li:hover:hover img {
-  filter: invert(39%) sepia(72%) saturate(900%) hue-rotate(233deg) brightness(90%) contrast(91%);
+.fonctionnement__container li:hover:hover
+.fonctionnement__container__picto {
+  color: #9356DC;
 }
 .fonctionnement__container li::before {
   content: counter(number);
