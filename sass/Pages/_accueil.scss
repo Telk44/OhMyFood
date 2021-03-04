@@ -38,7 +38,7 @@
             counter-reset:number; 
             display: flex;
             flex-wrap: wrap;
-            align-items: center;
+            padding-left: 6px;
         }
         &__picto{
             /* width: 14px; */
@@ -95,8 +95,10 @@
                 text-decoration: none;
                 color: black;
                 border-radius: 20px;
-                max-width: 336px;
-                max-height:252px;
+                width: 336px;
+                @media (max-width:350px) {
+                    width: 310px;
+                }
                 position: relative;
                 margin-bottom: 20px;
                 @include bloc-shadow();
@@ -118,6 +120,9 @@
                     position: absolute;
                     top:12px;
                     left:250px;
+                    @media (max-width:350px) {
+                        left: 232px;
+                    }
                     font-size: 14px;
                 }
             }

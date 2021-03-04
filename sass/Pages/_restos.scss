@@ -18,10 +18,10 @@
         flex-direction: row;
         justify-content: space-between;
         padding: 15px 15px 0 15px;
-            .far{
+            .emptyheart{
                 top: 38px;
             }
-            .fas{
+            .fullheart{
                 top: 38px;
             }
     }
@@ -63,12 +63,6 @@
                 margin-bottom: 20px;
                 overflow: hidden;
                 @include bloc-shadow();
-                &:hover >.select{  
-                    margin: 0 0 0 -77px;                                   
-                            img{
-                                transform: rotate(2turn);
-                            }
-                }
             }         
         }
     }
@@ -89,7 +83,7 @@
         & > .plat__select{             
             transform: translateX(-64px);
             transition: transform 1s;                                   
-                img{
+                & >.plat__select__circle{
                     transform: rotate(2turn);    
                 }
         }
@@ -145,11 +139,9 @@
         height: 100%;
         background-color:$background-nouveau;
         transform-origin: right;    
-        img{
-            width:20px; 
-            filter: invert(1); 
-            display: block;
-            transform: rotate(180deg);
+        &__circle{
+            color:white; 
+            transform: rotate(-180deg);
             transition: transform 500ms ease-in-out;                                        
         }
     }

@@ -33,8 +33,9 @@ header {
   position: relative;
   z-index: 10;
 }
-header img {
-  width: 18px;
+header .fa-arrow-left {
+  font-size: 18px;
+  color: black;
   position: absolute;
   top: 30px;
   left: 20px;
@@ -196,7 +197,7 @@ footer a:hover {
   animation-name: contour-heart;
   animation-duration: 1000ms;
 }
-.emptyheart:hover + .fas {
+.emptyheart:hover + .fullheart {
   opacity: 1;
   animation-name: progress-heart;
   animation-duration: 1000ms;
@@ -267,7 +268,7 @@ footer a:hover {
   counter-reset: number;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  padding-left: 6px;
 }
 .fonctionnement__container__picto {
   /* width: 14px; */
@@ -325,11 +326,15 @@ footer a:hover {
   text-decoration: none;
   color: black;
   border-radius: 20px;
-  max-width: 336px;
-  max-height: 252px;
+  width: 336px;
   position: relative;
   margin-bottom: 20px;
   box-shadow: 0px 0px 0.5rem 0px #cfcfcf;
+}
+@media (max-width: 350px) {
+  .fonctionnement__list__vignettes .box {
+    width: 310px;
+  }
 }
 .fonctionnement__list__vignettes .box__picture {
   width: 100%;
@@ -350,6 +355,11 @@ footer a:hover {
   top: 12px;
   left: 250px;
   font-size: 14px;
+}
+@media (max-width: 350px) {
+  .fonctionnement__list__vignettes .box__nouveau {
+    left: 232px;
+  }
 }
 
 .first-picture {
@@ -375,10 +385,10 @@ footer a:hover {
   justify-content: space-between;
   padding: 15px 15px 0 15px;
 }
-.resto__name .far {
+.resto__name .emptyheart {
   top: 38px;
 }
-.resto__name .fas {
+.resto__name .fullheart {
   top: 38px;
 }
 .resto__clic {
@@ -427,12 +437,6 @@ footer a:hover {
   overflow: hidden;
   box-shadow: 0px 0px 0.5rem 0px #cfcfcf;
 }
-.resto__all__menu__detail:hover > .select {
-  margin: 0 0 0 -77px;
-}
-.resto__all__menu__detail:hover > .select img {
-  transform: rotate(2turn);
-}
 
 .plat {
   display: flex;
@@ -453,7 +457,7 @@ footer a:hover {
   transform: translateX(-64px);
   transition: transform 1s;
 }
-.plat:hover > .plat__select img {
+.plat:hover > .plat__select > .plat__select__circle {
   transform: rotate(2turn);
 }
 .plat:hover > .plat__price {
@@ -506,11 +510,9 @@ footer a:hover {
   background-color: #99e2d0;
   transform-origin: right;
 }
-.plat__select img {
-  width: 20px;
-  filter: invert(1);
-  display: block;
-  transform: rotate(180deg);
+.plat__select__circle {
+  color: white;
+  transform: rotate(-180deg);
   transition: transform 500ms ease-in-out;
 }
 
