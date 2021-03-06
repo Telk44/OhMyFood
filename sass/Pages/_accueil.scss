@@ -19,10 +19,9 @@
         @include btn-background();
         cursor: pointer;
         width: 100%;
-        transition: background-image 500ms;
         &:hover{
             @include btn-shadow-darken();
-            @include btn-bg-darker(); 
+            @include btn-bg-lighten(); 
         }
     } 
 }

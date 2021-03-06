@@ -247,7 +247,6 @@ footer a:hover {
   box-shadow: 4px 4px 10px #cfcfcf;
   cursor: pointer;
   width: 100%;
-  transition: background-image 500ms;
 }
 .presentation__btn:hover {
   box-shadow: 4px 4px 10px #b6b6b6;
