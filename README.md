@@ -24,5 +24,4 @@ __Animations:__
 - À l’arrivée sur la page des menus, les plats devront apparaître progressivement avec un léger décalage dans le temps.
 - Le visiteur peut ajouter les plats qu'il souhaite à sa commande en cliquant dessus. Cela fait apparaître une petite coche à droite du plat. Cette coche devra coulisser de la droite vers la gauche. Pour cette première version, l’effet peut apparaître au survol sur desktop au lieu du clic. Si l’intitulé du plat est trop long, il devra être rogné avec des points de suspension. 
 
-Lien du site : https://telk44.github.io/KristellLansonneur_3_01022021/
-
+Lien du site :https://telk44.github.io/Ohmyfood/
